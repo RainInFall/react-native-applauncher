@@ -27,7 +27,7 @@
   "homepage": "https://github.com/RainInFall/react-native-applauncher#readme",
   "rnpm": {
     "android": {
-      "packageInstance": "new YSPackage()"
+      "packageInstance": "new AppPackage()"
     },
     "ios": {
       "project": "iOS/RCTYS.xcodeproj"
