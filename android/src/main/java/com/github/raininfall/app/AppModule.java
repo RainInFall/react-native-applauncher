@@ -1,8 +1,7 @@
-package com.github.raininfall.ys;
+package com.github.raininfall.app;
 
 import android.app.Application;
-
-import com.videogo.openapi.EZOpenSDK;
+import android.content.Intent;
 
 import com.facebook.common.logging.FLog;
 import com.facebook.react.bridge.Arguments;
@@ -20,12 +19,12 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
-public class YSModule extends ReactContextBaseJavaModule implements LifecycleEventListener{
+public class AppModule extends ReactContextBaseJavaModule implements LifecycleEventListener{
 
 
     final ReactApplicationContext mContext;
 
-    public YSModule(ReactApplicationContext reactContext) {
+    public AppModule(ReactApplicationContext reactContext) {
         super(reactContext);
 
         mContext = reactContext;
@@ -34,27 +33,18 @@ public class YSModule extends ReactContextBaseJavaModule implements LifecycleEve
 
     @Override
     public String getName() {
-        return "YS";
+        return "App";
     }
 
     @ReactMethod
-    public void showSDKLog(boolean bShowLog) {
-      EZOpenSDK.showSDKLog(bShowLog);
-    }
-
-    @ReactMethod
-    public void enableP2P(boolean bEnable){
-      EZOpenSDK.enableP2P(true);
-    }
-
-    @ReactMethod
-    public void initLib(String appKey, String loadLibraryAbsPath, Callback callback) {
-      callback.invoke(EZOpenSDK.initLib((Application)mContext.getApplicationContext(), appKey, loadLibraryAbsPath));
-    }
-
-    @ReactMethod
-    public void setAccessToken(String accessToken) {
-        EZOpenSDK.getInstance().setAccessToken(accessToken);
+    public void launchByPackageName(String packageName, Callback cb) {
+      Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
+      if (null != intent) {
+          mContext.startActivity(intent);
+          cb.invoke(true);
+          return;
+      }
+      cb.invoke(false);
     }
 
     @Override

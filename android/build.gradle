@@ -12,7 +12,6 @@ android {
 
     packagingOptions {
       // conflict with facebook's react native
-	    exclude 'lib/armeabi-v7a/libgnustl_shared.so'
 	  }
 
     defaultConfig {
@@ -29,5 +28,4 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   compile "com.facebook.react:react-native:+"
-  compile "com.google.code.gson:gson:+"
 }

@@ -1,4 +1,4 @@
-package com.github.raininfall.ys;
+package com.github.raininfall.app;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -10,15 +10,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class YSPackage implements ReactPackage {
+public class AppPackage implements ReactPackage {
 
-    public YSPackage() {
+    public AppPackage() {
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(
-            new YSModule(reactContext)
+            new AppModule(reactContext)
         );
     }
 
@@ -29,8 +29,6 @@ public class YSPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(
-            new YSRealPlayViewManager()
-        );
+        return Collections.emptyList();
     }
 }

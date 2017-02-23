@@ -1,5 +1,5 @@
 rootProject.name = 'demo'
-include ':react-native-ys'
-project(':react-native-ys').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ys/android')
+include ':react-native-app'
+project(':react-native-app').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-app/android')
 
 include ':app'

@@ -1,7 +1,7 @@
 {
-  "name": "react-native-ys",
+  "name": "react-native-applauncher",
   "version": "0.0.1",
-  "description": "open cloud of ys",
+  "description": "launch another app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "keywords": [
     "react-native",
     "ios",
-    "yingshi",
+    "application",
     "android"
   ],
   "peerDependencies": {
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RainInFall/react-native-ys.git"
+    "url": "git+https://github.com/RainInFall/react-native-applauncher.git"
   },
   "bugs": {
-    "url": "https://github.com/RainInFall/react-native-ys/issues"
+    "url": "https://github.com/RainInFall/react-native-applauncher/issues"
   },
-  "homepage": "https://github.com/RainInFall/react-native-ys#readme",
+  "homepage": "https://github.com/RainInFall/react-native-applauncher#readme",
   "rnpm": {
     "android": {
       "packageInstance": "new YSPackage()"

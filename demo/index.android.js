@@ -11,22 +11,13 @@ import {
   Text,
   View
 } from 'react-native';
-import ys, {RealPlayView} from 'react-native-ys';
+import appHelper from 'react-native-app';
 
 export default class demo extends Component {
-  componentWillMount() {
-    ys.showSDKLog(false);
-    ys.enableP2P(true);
-    ys.initLib('a428ead782174f3ab6db3317843799f9', '', (result) => {
-      console.log(`init result ${result}`);
-      ys.setAccessToken('at.275ay3em7231p32p0qupg1ozbuumj14i-8oglsvihq7-18xb3wu-l7omgwpza');
-    });
-  }
-  componentDidMount() {
-    this.video.play("656492863", 1);
-  }
-
   render() {
+    appHelper.launchByPackageName("com.unicom.gudong.client", (result) => {
+      console.log(result);
+    })
     return (
       <View style={styles.container}>
         <View style={styles.container2} >

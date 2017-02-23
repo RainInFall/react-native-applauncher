@@ -1,8 +1,3 @@
-const YS = require('react-native').NativeModules.YS;
-import { PropTypes } from 'react';
-import RealPlayView from './realplay';
+const App = require('react-native').NativeModules.App;
 
-export default YS;
-export {
-  RealPlayView,
-};
+export default App;
