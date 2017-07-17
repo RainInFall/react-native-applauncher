@@ -28,9 +28,6 @@
   "rnpm": {
     "android": {
       "packageInstance": "new AppPackage()"
-    },
-    "ios": {
-      "project": "iOS/RCTYS.xcodeproj"
     }
   }
 }
