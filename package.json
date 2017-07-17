@@ -1,6 +1,6 @@
 {
   "name": "react-native-applauncher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "launch another app",
   "main": "index.js",
   "scripts": {
